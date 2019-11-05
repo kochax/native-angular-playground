@@ -25,11 +25,15 @@
     "update:check": "ng update",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "clean": "npx rimraf -- hooks node_modules package-lock.json && npm i",
+    "start.nativescript.xplat-native-angular.ios": "cd apps/nativescript-xplat-native-angular && tns run ios --emulator",
+    "start.nativescript.xplat-native-angular.android": "cd apps/nativescript-xplat-native-angular && tns run android --emulator",
+    "start.nativescript.xplat-native-angular.preview": "cd apps/nativescript-xplat-native-angular && tns preview",
+    "clean.nativescript.xplat-native-angular": "cd apps/nativescript-xplat-native-angular && npx rimraf -- hooks node_modules platforms package-lock.json && npm i && npx rimraf -- package-lock.json"
   },
   "private": true,
   "dependencies": {
-    "@nrwl/angular": "8.7.0",
     "@angular/animations": "^8.2.0",
     "@angular/common": "^8.2.0",
     "@angular/compiler": "^8.2.0",
@@ -38,9 +42,19 @@
     "@angular/platform-browser": "^8.2.0",
     "@angular/platform-browser-dynamic": "^8.2.0",
     "@angular/router": "^8.2.0",
+    "@nrwl/angular": "8.7.0",
+    "@nstudio/xplat": "^8.0.10",
     "core-js": "^2.5.4",
     "rxjs": "~6.4.0",
-    "zone.js": "^0.9.1"
+    "zone.js": "^0.9.1",
+    "nativescript-theme-core": "^1.0.4",
+    "tns-core-modules": "~6.0.0",
+    "nativescript-angular": "~8.0.0",
+    "nativescript-ngx-fonticon": "^4.2.0",
+    "@native-playground/scss": "file:libs/scss",
+    "@ngx-translate/core": "~11.0.0",
+    "@ngx-translate/http-loader": "~4.0.0",
+    "reflect-metadata": "^0.1.12"
   },
   "devDependencies": {
     "@angular/cli": "8.3.3",
@@ -62,6 +76,18 @@
     "@types/jest": "24.0.9",
     "ts-jest": "24.0.0",
     "cypress": "3.4.1",
-    "@nrwl/cypress": "8.7.0"
+    "@nrwl/cypress": "8.7.0",
+    "@nstudio/xplat": "8.0.10",
+    "@nstudio/angular": "8.0.10",
+    "@nstudio/nativescript-angular": "8.0.10",
+    "@nrwl/angular": "8.7.0",
+    "@nstudio/nativescript": "8.0.10",
+    "node-sass": "^4.12.0",
+    "terser-webpack-plugin": "~1.2.0",
+    "tns-platform-declarations": "~6.0.0"
+  },
+  "xplat": {
+    "prefix": "native-playground",
+    "framework": "angular"
   }
 }

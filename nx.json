@@ -13,6 +13,15 @@
     },
     "angular-native": {
       "tags": []
+    },
+    "libs": {
+      "tags": []
+    },
+    "xplat": {
+      "tags": []
+    },
+    "nativescript-xplat-native-angular": {
+      "tags": []
     }
   }
 }
